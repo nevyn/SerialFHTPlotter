@@ -16,7 +16,7 @@ class FHTPlotterViewController: NSViewController, CPTPlotDataSource, ORSSerialPo
     static let high = 255;
     static let low = 0;
     static let range = high - low;
-    static let sampleCount = 255;
+    static let sampleCount = 128;
     
     override func viewDidLoad()
     {
@@ -120,7 +120,7 @@ class FHTPlotterViewController: NSViewController, CPTPlotDataSource, ORSSerialPo
     func serialPort(serialPort: ORSSerialPort, didReceiveData data: NSData) {
         let incoming = Array(UnsafeBufferPointer(start: UnsafePointer<UInt8>(data.bytes), count: data.length))
         for x in incoming {
-            if x == 255 || lastIndex == 255 {
+            if x == 255 || lastIndex == FHTPlotterViewController.sampleCount {
                 lastIndex = 0
                 self.graphView.hostedGraph?.reloadData()
                 continue
