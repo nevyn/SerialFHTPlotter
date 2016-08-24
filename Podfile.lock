@@ -1,0 +1,15 @@
+PODS:
+  - CorePlot (2.1)
+  - ORSSerialPort (2.0.2)
+
+DEPENDENCIES:
+  - CorePlot
+  - ORSSerialPort
+
+SPEC CHECKSUMS:
+  CorePlot: ab9898c79b94999018e9634ab0aa4c21480c8552
+  ORSSerialPort: 3fb0d2404b7e8b99c4f1aa7e7314d63030cd54c3
+
+PODFILE CHECKSUM: 4bcdf7767e1c8b0168c286df2b1231ecf7a8cc15
+
+COCOAPODS: 1.0.1
